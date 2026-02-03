@@ -1,0 +1,5 @@
+/Users/longtao/Documents/Software/yudao-boot-mini/yudao-framework/yudao-spring-boot-starter-redis/src/main/java/cn/iocoder/yudao/framework/redis/config/YudaoCacheAutoConfiguration.java
+/Users/longtao/Documents/Software/yudao-boot-mini/yudao-framework/yudao-spring-boot-starter-redis/src/main/java/cn/iocoder/yudao/framework/redis/config/YudaoCacheProperties.java
+/Users/longtao/Documents/Software/yudao-boot-mini/yudao-framework/yudao-spring-boot-starter-redis/src/main/java/cn/iocoder/yudao/framework/redis/config/YudaoRedisAutoConfiguration.java
+/Users/longtao/Documents/Software/yudao-boot-mini/yudao-framework/yudao-spring-boot-starter-redis/src/main/java/cn/iocoder/yudao/framework/redis/core/TimeoutRedisCacheManager.java
+/Users/longtao/Documents/Software/yudao-boot-mini/yudao-framework/yudao-spring-boot-starter-redis/src/main/java/cn/iocoder/yudao/framework/redis/package-info.java
