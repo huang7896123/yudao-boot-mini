@@ -9,9 +9,10 @@
 
 
     <view class="mt-50px p-20rpx pb-10rpx bg-white">
-      <HomeBanner></HomeBanner>
+      <view class="overflow-hidden rounded-16rpx">
+        <HomeBanner :banner-list="bannerList"></HomeBanner>
+      </view>
     </view>
-
 
 
     <!-- Tabs 区域 -->
@@ -42,6 +43,7 @@
             <wd-img src="https://picsum.photos/id/100/300/300" width="36rpx" height="36rpx" radius="9" mode="aspectFill"/>
             <view class="text-24rpx opacity-80 ml-10rpx">{{ item.templateNickname }}</view>
           </view>
+
           <view class=" flex items-center justify-between">
             <view class="flex items-center justify-between opacity-60">
               <wd-icon name="download1" size="26rpx"></wd-icon>
@@ -59,11 +61,7 @@
       <view v-if="loadMoreState !== 'loading' && list.length === 0" class="py-100rpx text-center">
         <wd-status-tip image="content" tip="暂无消息" />
       </view>
-      <wd-loadmore
-        v-if="list.length > 0"
-        :state="loadMoreState"
-        @reload="loadMore"
-      />
+      <wd-loadmore v-if="list.length > 0" :state="loadMoreState" @reload="loadMore" />
     </view>
   </view>
 </template>
@@ -89,6 +87,13 @@ interface TabItem {
   label: string;
   value: string;
 }
+
+const bannerList = ref([
+  { id: 1, link: 'https://www.baidu.com', url: 'https://picsum.photos/id/100/300/200' },
+  { id: 2, link: 'https://www.baidu.com', url: 'https://picsum.photos/id/101/300/200' },
+  { id: 3, link: 'https://www.baidu.com', url: 'https://picsum.photos/id/102/300/200' }
+])
+
 
 const tabIndex = ref<string>('1')
 const tabType = reactive<TabItem[]>([
@@ -151,6 +156,7 @@ async function getList() {
 /** 查看详情 */
 function handleDetail(id: number) {
   console.log(id)
+  uni.navigateTo({ url: '/pages/bpm/details/index' })
 }
 
 /** 加载更多 */

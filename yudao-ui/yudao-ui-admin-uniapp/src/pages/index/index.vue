@@ -31,7 +31,7 @@
       <view class="title-box mb-20rpx">
         <view class="text-34rpx font-semibold">打印机</view>
       </view>
-      <view v-for="data in 3" :key="data" class="item-card bg-white flex justify-between items-center mb-30rpx" @click="handleGoDetails()">
+      <view v-for="data in 3" :key="data" class="item-card bg-white flex justify-between items-center mb-30rpx" @click="handleGoDetails(data)">
         <view>
           <view class="text-36rpx font-semibold">小黑妞</view>
           <view class="mt-10rpx">
@@ -74,7 +74,7 @@ definePage({
 
 // 跳转详情页
 /** 跳转到个人资料 */
-function handleGoDetails() {
+function handleGoDetails(id) {
   uni.navigateTo({ url: '/pages/index/details/index' })
 }
 

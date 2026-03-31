@@ -8,7 +8,9 @@
   padding-top: 4px;
   color: red;
 }
-
+*{
+  box-sizing: border-box;
+}
 :root,
 page {
   // 修改按主题色
@@ -144,3 +146,19 @@ body[data-theme="light"] {
 .border-bottom{
   border-bottom: 1px solid #eee;
 }
+.border-top{
+  border-top: 1px solid #eee;
+}
+.border-1{
+  border: 1px solid #eee;
+}
+.btn-primary{
+  background-color: var(--wot-button-primary-bg-color, #37c2bc);
+  color: #fff;
+  padding: 8rpx 16rpx;
+  border-radius: 4rpx;
+}
+.bg-eee .wd-textarea__value{
+  background: #eee !important;
+}
+
