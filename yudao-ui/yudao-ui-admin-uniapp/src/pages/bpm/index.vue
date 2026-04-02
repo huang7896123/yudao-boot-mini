@@ -67,13 +67,14 @@
 </template>
 
 <script lang="ts" setup>
+import type { NotifyMessage} from "@/api/system/notify/message";
 import { computed, ref } from 'vue'
+import {useToast} from "wot-design-uni";
+import {getMyNotifyMessagePage} from "@/api/system/notify/message";
+import type {LoadMoreState} from "@/http/types";
+import DetailPopup from "@/pages/message/components/detail-popup.vue";
 import { getAndClearTabParams } from '@/utils/url'
 import HomeBanner from './components/banner.vue'
-import {useToast} from "wot-design-uni";
-import {getMyNotifyMessagePage, NotifyMessage} from "@/api/system/notify/message";
-import {LoadMoreState} from "@/http/types";
-import DetailPopup from "@/pages/message/components/detail-popup.vue";
 
 definePage({
   style: {
@@ -81,11 +82,11 @@ definePage({
   },
 })
 
-const current = ref(0);
+const current = ref(0)
 
 interface TabItem {
-  label: string;
-  value: string;
+  label: string
+  value: string
 }
 
 const bannerList = ref([
@@ -93,7 +94,6 @@ const bannerList = ref([
   { id: 2, link: 'https://www.baidu.com', url: 'https://picsum.photos/id/101/300/200' },
   { id: 3, link: 'https://www.baidu.com', url: 'https://picsum.photos/id/102/300/200' }
 ])
-
 
 const tabIndex = ref<string>('1')
 const tabType = reactive<TabItem[]>([
@@ -126,7 +126,6 @@ onShow(() => {
     }
   }
 })
-
 
 // 龙涛加载内容
 const toast = useToast()
@@ -177,11 +176,10 @@ onReachBottom(() => {
 onMounted(() => {
   getList()
 })
-
-
 </script>
+
 <style lang="scss" scoped>
-.sq-head{
+.sq-head {
   position: fixed;
   top: 0;
   left: 0;
@@ -193,12 +191,12 @@ onMounted(() => {
 }
 .sq-head :deep(.wd-segmented) {
   background: none;
-  .wd-segmented__item{
+  .wd-segmented__item {
     border-radius: 20px;
     padding: 0 5px;
     font-weight: 500;
   }
-  .wd-segmented__item.is-active{
+  .wd-segmented__item.is-active {
     background: #333;
     color: #fff;
   }

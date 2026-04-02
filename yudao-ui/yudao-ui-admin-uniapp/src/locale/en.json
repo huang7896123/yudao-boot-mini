@@ -1,0 +1,53 @@
+{
+  "word": {
+    "setting": "Setting",
+    "more": "More",
+    "modifySetting": "Modify Setting",
+    "printer": "Printer",
+    "printerName": "Printer Name",
+    "printMode": "Print Mode",
+    "ink": "Ink",
+    "printerStatus": "Print Status",
+    "printJobStatus": "Print Job Status",
+    "printJob": "Print Job",
+    "skip": "Skip",
+    "pausePrint": "Pause",
+    "cancelPrint": "Cancel",
+    "printParameters": "Print Parameters",
+    "bottomLayer": "Bottom Layer",
+    "bottomScanCount": "Bottom Scan Count",
+    "realLayer": "Real Layer",
+    "realScanCount": "Real Scan Count",
+    "topLayer": "Top Layer",
+    "topScanCount": "Top Scan Count",
+    "file": "File",
+    "task": "Task",
+    "print": "Print",
+    "scan": "Scan",
+    "addPrinter": "Add Printer",
+    "printDuration": "Print Duration",
+    "totalConsumption": "Total Consumption",
+    "model": "Model"
+  },
+  "pageName": {
+    "workbench": "Workbench",
+    "printerDetails": "Printer Details"
+  },
+  "printerStatus": [
+    { "value": "printing", "label": "Printing" },
+    { "value": "idle", "label": "Idle" },
+    { "value": "ready", "label": "Ready" },
+    { "value": "error", "label": "Error" },
+    { "value": "offline", "label": "Offline" }
+  ],
+  "printerMode": [
+    { "value": "speed", "label": "Speed Priority" },
+    { "value": "quality", "label": "Quality Priority" }
+  ],
+  "printerJobStatus": [
+    { "value": "printing", "label": "Printing" },
+    { "value": "completed", "label": "Completed" },
+    { "value": "failed", "label": "Failed" }
+  ]
+
+}

@@ -1,0 +1,52 @@
+{
+  "word": {
+    "setting": "设置",
+    "more": "更多",
+    "modifySetting": "修改设置",
+    "printer": "打印机",
+    "printerName": "打印机名称",
+    "printMode": "打印模式",
+    "ink": "料盒",
+    "printerStatus": "打印状态",
+    "printJobStatus": "打印任务状态",
+    "printJob": "打印任务",
+    "skip": "跳过",
+    "pausePrint": "暂停打印",
+    "cancelPrint": "取消打印",
+    "printParameters": "打印参数",
+    "bottomLayer": "底层层数",
+    "bottomScanCount": "底层扫描数",
+    "realLayer": "实体层",
+    "realScanCount": "实体层扫描数",
+    "topLayer": "上层层数",
+    "topScanCount": "上层扫描数",
+    "file": "文件",
+    "task": "任务",
+    "print": "打印",
+    "scan": "扫描",
+    "addPrinter": "添加打印机",
+    "printDuration": "打印时长",
+    "totalConsumption": "总消耗耗材",
+    "model": "机型"
+  },
+  "pageName": {
+    "workbench": "工作台",
+    "printerDetails": "打印机详情"
+  },
+  "printerStatus": [
+    { "value": "printing", "label": "打印中" },
+    { "value": "idle", "label": "空闲" },
+    { "value": "ready", "label": "就绪" },
+    { "value": "error", "label": "错误" },
+    { "value": "offline", "label": "离线" }
+  ],
+  "printerMode": [
+    { "value": "speed", "label": "速度优先" },
+    { "value": "quality", "label": "质量优先" }
+  ],
+  "printerJobStatus": [
+    { "value": "printing", "label": "打印中" },
+    { "value": "completed", "label": "已完成" },
+    { "value": "failed", "label": "打印失败" }
+  ]
+}
