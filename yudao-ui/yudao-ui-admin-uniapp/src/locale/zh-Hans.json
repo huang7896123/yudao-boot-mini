@@ -27,7 +27,21 @@
     "addPrinter": "添加打印机",
     "printDuration": "打印时长",
     "totalConsumption": "总消耗耗材",
-    "model": "机型"
+    "model": "机型",
+    "follow": "关注",
+    "follower": "粉丝",
+    "like": "点赞",
+    "market": "商城",
+    "learning": "学习",
+    "printHistory": "打印历史",
+    "browseHistory": "浏览历史",
+    "helpCenter": "帮助中心",
+    "security": "账号安全",
+    "settings": "设置"
+  },
+  "desc": {
+    "marketDesc": "打印机/耗材/配件",
+    "learningDesc": "常见的打印问题与..."
   },
   "pageName": {
     "workbench": "工作台",

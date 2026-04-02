@@ -27,7 +27,21 @@
     "addPrinter": "Add Printer",
     "printDuration": "Print Duration",
     "totalConsumption": "Total Consumption",
-    "model": "Model"
+    "model": "Model",
+    "follow": "Follow",
+    "follower": "Follower",
+    "like": "Like",
+    "market": "Market",
+    "learning": "Learning",
+    "printHistory": "Print History",
+    "browseHistory": "Browse History",
+    "helpCenter": "Help Center",
+    "security": "Security",
+    "settings": "Settings"
+  },
+  "desc": {
+    "marketDesc": "Printer/Ink/Accessory",
+    "learningDesc": "Common printing problems and solutions"
   },
   "pageName": {
     "workbench": "Workbench",

@@ -1,27 +1,24 @@
 <template>
   <view class="yd-page-container">
-    <view class="sq-head bg-white flex justify-between items-center px-15px">
+    <view class="sq-head flex items-center justify-between bg-white px-15px">
       <view class="w-140px">
-        <wd-segmented :options="['探索', '社区']" v-model:value="current"></wd-segmented>
+        <wd-segmented v-model:value="current" :options="['探索', '社区']" />
       </view>
-      <view class="cp-sousuo text-20px font-700"></view>
+      <view class="cp-sousuo text-20px font-700" />
     </view>
 
-
-    <view class="mt-50px p-20rpx pb-10rpx bg-white">
+    <view class="mt-50px bg-white p-20rpx pb-10rpx">
       <view class="overflow-hidden rounded-16rpx">
-        <HomeBanner :banner-list="bannerList"></HomeBanner>
+        <HomeBanner :banner-list="bannerList" />
       </view>
     </view>
-
 
     <!-- Tabs 区域 -->
     <view class="sq-tab">
       <wd-sticky custom-class="sdsd">
         <wd-tabs v-model="tabIndex" sticky @change="handleTabChange">
           <block v-for="item in tabType" :key="item.value">
-            <wd-tab :title="`${item.label}`">
-            </wd-tab>
+            <wd-tab :title="`${item.label}`" />
           </block>
         </wd-tabs>
       </wd-sticky>
@@ -32,31 +29,31 @@
       <view
         v-for="item in list"
         :key="item.id"
-        class="mt-24rpx overflow-hidden rounded-12rpx bg-white shadow-sm w-47% float-left mx-1.5%"
+        class="float-left mx-1.5% mt-24rpx w-47% overflow-hidden rounded-12rpx bg-white shadow-sm"
         @click="handleDetail(item.id)"
       >
         <wd-img src="https://picsum.photos/seed/picsum/300/200" width="100%" height="280rpx" mode="aspectFill"/>
         <view class="p-20rpx">
           <!-- 消息头部 -->
-          <view class="text-32rpx opacity-90 font-semibold mb-12rpx">{{ item.templateNickname }}</view>
+          <view class="mb-12rpx text-32rpx font-semibold opacity-90">{{ item.templateNickname }}</view>
           <view class="mb-25rpx flex items-center">
             <wd-img src="https://picsum.photos/id/100/300/300" width="36rpx" height="36rpx" radius="9" mode="aspectFill"/>
-            <view class="text-24rpx opacity-80 ml-10rpx">{{ item.templateNickname }}</view>
+            <view class="ml-10rpx text-24rpx opacity-80">{{ item.templateNickname }}</view>
           </view>
 
-          <view class=" flex items-center justify-between">
+          <view class="flex items-center justify-between">
             <view class="flex items-center justify-between opacity-60">
-              <wd-icon name="download1" size="26rpx"></wd-icon>
+              <wd-icon name="download1" size="26rpx" />
               <view class="ml-5rpx text-24rpx">8</view>
             </view>
             <view class="flex items-center justify-between opacity-60">
-              <wd-icon name="thumb-up" size="30rpx"></wd-icon>
+              <wd-icon name="thumb-up" size="30rpx" />
               <view class="ml-5rpx text-24rpx">8</view>
             </view>
           </view>
         </view>
       </view>
-      <view class="clear-both"></view>
+      <view class="clear-both" />
       <!-- 加载更多 -->
       <view v-if="loadMoreState !== 'loading' && list.length === 0" class="py-100rpx text-center">
         <wd-status-tip image="content" tip="暂无消息" />
@@ -67,13 +64,13 @@
 </template>
 
 <script lang="ts" setup>
-import type { NotifyMessage} from "@/api/system/notify/message";
-import { computed, ref } from 'vue'
-import {useToast} from "wot-design-uni";
-import {getMyNotifyMessagePage} from "@/api/system/notify/message";
-import type {LoadMoreState} from "@/http/types";
-import DetailPopup from "@/pages/message/components/detail-popup.vue";
+import type { NotifyMessage } from '@/api/system/notify/message/index'
+import type { LoadMoreState } from '@/http/types'
+import { ref } from 'vue'
+import { useToast } from 'wot-design-uni'
+import { getMyNotifyMessagePage } from '@/api/system/notify/message/index'
 import { getAndClearTabParams } from '@/utils/url'
+import DetailPopup from '@/pages/message/components/detail-popup.vue'
 import HomeBanner from './components/banner.vue'
 
 definePage({
@@ -103,7 +100,7 @@ const tabType = reactive<TabItem[]>([
   { label: '机器人', value: '4' },
   { label: '机器人', value: '5' },
   { label: '首饰', value: '6' },
-  { label: '醒狮', value: '7' }
+  { label: '醒狮', value: '7' },
 ])
 
 /** Tab 切换 */
@@ -201,7 +198,7 @@ onMounted(() => {
     color: #fff;
   }
 }
-.sq-tab > *{
+.sq-tab > * {
   background: none;
   width: 100% !important;
 }
