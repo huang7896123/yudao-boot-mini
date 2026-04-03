@@ -8,42 +8,44 @@
 
     <wd-row class="p-30rpx">
       <wd-col :span="12" class="pr-15rpx">
-        <view class="item-card bg-white flex justify-between items-center">
+        <view class="item-card flex items-center justify-between bg-white">
           <view class="flex items-center">
-            <view class="i-my-icons-wenjian-is mr-16rpx text-38rpx"></view>
+            <view class="i-my-icons-wenjian-is mr-16rpx text-38rpx" />
             <view class="text-28rpx">{{ $t('word.file') }}</view>
           </view>
-          <wd-icon name="chevron-right" class="opacity-70" size="22px"></wd-icon>
+          <wd-icon name="chevron-right" class="opacity-70" size="22px" />
         </view>
       </wd-col>
       <wd-col :span="12" class="pl-15rpx">
-        <view class="item-card bg-white flex justify-between items-center">
+        <view class="item-card flex items-center justify-between bg-white">
           <view class="flex items-center">
-            <view class="i-my-icons-renwu-is mr-16rpx text-38rpx"></view>
+            <view class="i-my-icons-renwu-is mr-16rpx text-38rpx" />
             <view class="text-28rpx">{{ $t('word.task') }}</view>
           </view>
-          <wd-icon name="chevron-right" class="opacity-70" size="22px"></wd-icon>
+          <wd-icon name="chevron-right" class="opacity-70" size="22px" />
         </view>
       </wd-col>
     </wd-row>
 
-    <view class="px-30rpx mt-20rpx">
+    <view class="mt-20rpx px-30rpx">
       <view class="title-box mb-20rpx">
         <view class="text-34rpx font-semibold">{{ $t('word.printer') }}</view>
       </view>
-      <view v-for="data in 3" :key="data" class="item-card bg-white flex justify-between items-center mb-30rpx" @click="handleGoDetails(data)">
+      <view v-for="data in 3" :key="data" class="item-card mb-30rpx flex items-center justify-between bg-white" @click="handleGoDetails(data)">
         <view>
           <view class="text-36rpx font-semibold">小黑妞</view>
           <view class="mt-10rpx">
-            <wd-tag class="tag-state-box" color="#4fd562" bg-color="#eefbf1"><text class="cp-dian mr-3rpx"></text>空闲</wd-tag>
+            <wd-tag class="tag-state-box" color="#4fd562" bg-color="#eefbf1">
+              <text class="cp-dian mr-3rpx" />空闲
+            </wd-tag>
           </view>
           <view class="mt-50rpx">
             <view class="text-24rpx opacity-80">{{ $t('word.printDuration') }}：1044小时5分</view>
-            <view class="text-24rpx mt-15rpx opacity-80">{{ $t('word.totalConsumption') }}：45339.04ml</view>
-            <view class="text-24rpx mt-15rpx opacity-80">{{ $t('word.model') }}：Qubea 线光机X3</view>
+            <view class="mt-15rpx text-24rpx opacity-80">{{ $t('word.totalConsumption') }}：45339.04ml</view>
+            <view class="mt-15rpx text-24rpx opacity-80">{{ $t('word.model') }}：Qubea 线光机X3</view>
           </view>
         </view>
-        <wd-img :src="cpImgUrl" width="280rpx" height="280rpx" mode="aspectFit"/>
+        <wd-img :src="cpImgUrl" width="280rpx" height="280rpx" mode="aspectFit" />
       </view>
 
       <view class="my-48rpx">

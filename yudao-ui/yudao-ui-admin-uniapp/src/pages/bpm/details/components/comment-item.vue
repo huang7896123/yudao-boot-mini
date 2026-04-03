@@ -1,18 +1,20 @@
+<!-- eslint-disable vue/no-mutating-props -->
 <!-- 商品评论项 -->
 <template>
   <view class="">
     <!-- 用户评论 -->
-    <view class="user flex items-center mb-14rpx">
+    <view class="user mb-14rpx flex items-center">
       <view class="mr-20rpx flex">
-        <image class="avatar" :src="item.userAvatar"></image>
+        <image class="avatar" :src="item.userAvatar" />
       </view>
       <view class="nickname mr-20rpx">{{ item.userNickname }}</view>
-      <view class="items-center mb-12rpx">
+      <view class="mb-12rpx items-center">
+        // eslint-disable-next-line vue/no-mutating-props
         <wd-rate v-model="item.scores" readonly size="24rpx" />
       </view>
     </view>
     <view class="content"> {{ item.content }} </view>
-    <view class="mt-24rpx" v-if="item.picUrls?.length">
+    <view v-if="item.picUrls?.length" class="mt-24rpx">
       <scroll-view class="scroll-box" scroll-x scroll-anchoring>
         <view class="flex">
           <view v-for="(picUrl, index) in item.picUrls" :key="index" class="mr-10rpx">
@@ -29,7 +31,7 @@
       </scroll-view>
     </view>
     <!-- 商家回复 -->
-    <view class="mt-20rpx reply-box" v-if="item.replyTime">
+    <view v-if="item.replyTime" class="reply-box mt-20rpx">
       <view class="reply-title">商家回复：</view>
       <view class="reply-content">{{ item.replyContent }}</view>
     </view>
@@ -42,7 +44,7 @@ const props = defineProps({
     type: Object,
     default() {},
   },
-});
+})
 </script>
 
 <style lang="scss" scoped>

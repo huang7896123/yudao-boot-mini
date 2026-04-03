@@ -11,6 +11,9 @@
     },
     "resolveJsonModule": true,
     "types": [
+      "pinia",
+      "wot-design-uni",
+      "@vue/runtime-core",
       "@dcloudio/types",
       "@uni-helper/uni-types",
       "@uni-helper/vite-plugin-uni-pages",

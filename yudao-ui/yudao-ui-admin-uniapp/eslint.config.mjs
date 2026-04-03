@@ -34,7 +34,7 @@ export default uniHelper({
     'no-extend-native': 'off',
     'style/brace-style': 'off', // 参考 https://github.com/antfu/eslint-config/issues/322 帖子：关闭此规则，使用下面的 brace-style 规则
     'vue/singleline-html-element-content-newline': [
-      'error',
+      'off',
       {
         externalIgnores: ['text'],
       },

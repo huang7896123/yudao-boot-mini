@@ -8,7 +8,7 @@
       <view class="mt-10rpx flex items-center px-32rpx" @click="handleGoProfile">
         <view class="avatar-wrapper mr-24rpx h-120rpx w-120rpx overflow-hidden rounded-full">
           <!-- <image :src="userInfo.avatar" mode="aspectFill" class="h-full w-full"/> -->
-          <image src="https://picsum.photos/seed/picsum/300/300" mode="aspectFill" class="h-full w-full"/>
+          <image src="https://picsum.photos/seed/picsum/300/300" mode="aspectFill" class="h-full w-full" />
         </view>
         <view class="flex-1">
           <view class="mb-8rpx text-40rpx text-[#323333] font-semibold">
@@ -50,7 +50,7 @@
         <view class="item-card flex items-center justify-between bg-white">
           <view>
             <view class="text-30rpx font-semibold">{{ $t('word.learning') }}</view>
-            <view class="mt-5rpx text-22rpx opacity-40 line-clamp-1">{{ $t('desc.learningDesc') }}</view>
+            <view class="line-clamp-1 mt-5rpx text-22rpx opacity-40">{{ $t('desc.learningDesc') }}</view>
           </view>
           <view class="cp-xuexi text-64rpx text-[#00b946]" />
         </view>
