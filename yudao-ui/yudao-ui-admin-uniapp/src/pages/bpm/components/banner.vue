@@ -17,7 +17,7 @@ defineOptions({
 
 const props = defineProps({
   bannerList: {
-    type: Array,
+    type: Array as PropType<BannerItem[]>,
     default: () => [],
   },
   height: {
@@ -26,12 +26,17 @@ const props = defineProps({
   },
 })
 
+interface BannerItem {
+  url: string
+  link?: string
+}
+
 const banners = computed(() => {
   return props.bannerList.map(item => item.url)
 })
 
 /** 处理点击 */
-function handleClick(data: object) {
+function handleClick(data: { index: number }) {
   // TODO @芋艿：看看后续要不要支持跳转
   const link = props.bannerList[data.index].link
   if (link) {

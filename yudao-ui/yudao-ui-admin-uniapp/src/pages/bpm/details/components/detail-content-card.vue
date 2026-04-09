@@ -1,14 +1,14 @@
 <template>
-  <view class="detail-content-card bg-white  py-30rpx">
-    <view class="card-header flex items-center mb-15rpx ml-30rpx">
-      <view class="line"></view>
+  <view class="detail-content-card bg-white py-30rpx">
+    <view class="card-header mb-15rpx ml-30rpx flex items-center">
+      <view class="line" />
       <view class="title ml-20rpx">详情</view>
     </view>
     <view class="card-content px-30rpx">
-      <rich-text :nodes="content"></rich-text>
+      <rich-text :nodes="content" />
     </view>
     <view class="px-30rpx pt-15rpx">
-      <wd-tag v-for="data in 10" color="#666" bg-color="#f3f3f3" round class="mr-10rpx mt-10rpx">标签</wd-tag>
+      <wd-tag v-for="data in 10" :key="data" color="#666" bg-color="#f3f3f3" round class="mr-10rpx mt-10rpx">标签</wd-tag>
     </view>
   </view>
 </template>
@@ -19,7 +19,11 @@ const props = defineProps({
     type: String,
     default: '',
   },
-});
+})
+</script>
+
+<script>
+export default { name: 'DetailContentCard' }
 </script>
 
 <style lang="scss" scoped>
@@ -28,7 +32,7 @@ const props = defineProps({
     .line {
       width: 6rpx;
       height: 30rpx;
-      background: #2E7BFF;
+      background: #2e7bff;
       border-radius: 3rpx;
     }
 

@@ -72,9 +72,8 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-
-import Banner from '@/pages/bpm/components/banner.vue'
 import { navigateBackPlus } from '@/utils/index'
+import Banner from '../components/banner.vue'
 import detailCommentCard from './components/detail-comment-card.vue'
 import detailContentCard from './components/detail-content-card.vue'
 

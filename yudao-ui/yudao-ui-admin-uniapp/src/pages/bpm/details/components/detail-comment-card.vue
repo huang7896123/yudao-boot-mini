@@ -99,6 +99,9 @@ function handleClose() {
 function handleChange({ fileList }) {
   commentObj.value.picUrls = fileList.map(file => file.url)
 }
+
+// 添加这行
+defineExpose({})
 </script>
 
 <style lang="scss" scoped>

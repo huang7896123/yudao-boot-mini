@@ -1,4 +1,3 @@
-<!-- eslint-disable vue/no-mutating-props -->
 <!-- 商品评论项 -->
 <template>
   <view class="">
@@ -9,7 +8,7 @@
       </view>
       <view class="nickname mr-20rpx">{{ item.userNickname }}</view>
       <view class="mb-12rpx items-center">
-        // eslint-disable-next-line vue/no-mutating-props
+        <!-- eslint-disable vue/no-mutating-props -->
         <wd-rate v-model="item.scores" readonly size="24rpx" />
       </view>
     </view>

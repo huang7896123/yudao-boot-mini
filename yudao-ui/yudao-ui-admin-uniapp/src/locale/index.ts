@@ -9,7 +9,8 @@ const messages = {
 
 const i18n = createI18n({
   legacy: true,
-  locale: 'en',
+  // locale: 'en',
+  locale: 'zh-Hans',
   // locale: (uni.getLocale ? uni.getLocale() : 'zh-Hans'),
   fallbackLocale: 'en',
   messages,
