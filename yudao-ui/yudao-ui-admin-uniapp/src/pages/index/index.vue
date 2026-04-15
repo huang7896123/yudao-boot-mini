@@ -49,7 +49,7 @@
       </view>
 
       <view class="my-48rpx">
-        <wd-button block type="primary" custom-style="height:40px; border-radius: 5px">
+        <wd-button block type="primary" custom-style="height:40px; border-radius: 5px" @click="handleScan">
           {{ $t('word.addPrinter') }}
         </wd-button>
       </view>
@@ -70,6 +70,26 @@ definePage({
     navigationStyle: 'custom',
   },
 })
+
+const scanResult = ref('')
+/** 扫描二维码 */
+async function handleScan() {
+  try {
+    const res = await uni.scanCode({
+      onlyFromCamera: true, // 是否只允许相机扫码
+      scanType: ['qrCode', 'barCode'], // 扫码类型
+    })
+
+    console.log('扫码结果:', res)
+    scanResult.value = res.result
+  } catch (err) {
+    console.error('扫码失败:', err)
+    uni.showToast({
+      title: '扫码取消或失败',
+      icon: 'none',
+    })
+  }
+}
 
 // 跳转详情页
 /** 跳转到个人资料 */
