@@ -1,0 +1,9 @@
+# 所有文本文件统一使用 LF
+* text=auto eol=lf
+
+# Java 源码明确指定
+*.java text eol=lf
+
+# 不转换二进制文件
+*.jar binary
+*.zip binary
